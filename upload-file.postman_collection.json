@@ -17,20 +17,18 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/D:/hình nền/hinh-nen-may-tinh-1080x1920-toi-gian.jpg"
+							"src": "/D:/hình nền/hinh.jpg"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:5555/upload/",
-					"protocol": "http",
+					"raw": "{{host}}/upload/file",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5555",
 					"path": [
 						"upload",
-						""
+						"file"
 					]
 				}
 			},
@@ -42,15 +40,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5555/upload/",
-					"protocol": "http",
+					"raw": "{{host}}/upload/all",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5555",
 					"path": [
 						"upload",
-						""
+						"all"
 					]
 				}
 			},
@@ -62,15 +58,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5555/upload/b03bc722-44a9-4a16-96f0-76ed5853e37b",
-					"protocol": "http",
+					"raw": "{{host}}/upload/089c1a75-04f0-4b5c-8f2c-1d68d5f22f52",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5555",
 					"path": [
 						"upload",
-						"b03bc722-44a9-4a16-96f0-76ed5853e37b"
+						"089c1a75-04f0-4b5c-8f2c-1d68d5f22f52"
 					]
 				}
 			},
@@ -82,16 +76,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5555/upload/img/1674729357655-811731436.jpg",
-					"protocol": "http",
+					"raw": "{{host}}/upload/img/1674810845550-391319071.jpg",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5555",
 					"path": [
 						"upload",
 						"img",
-						"1674729357655-811731436.jpg"
+						"1674810845550-391319071.jpg"
 					]
 				}
 			},
@@ -103,15 +95,41 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5555/upload/0e9490db-4ed1-4d88-995e-9dae5b8564f4",
-					"protocol": "http",
+					"raw": "{{host}}/upload/b1023dc3-6762-4eee-b1ba-83ee21eedef7",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5555",
 					"path": [
 						"upload",
-						"0e9490db-4ed1-4d88-995e-9dae5b8564f4"
+						"b1023dc3-6762-4eee-b1ba-83ee21eedef7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fileName",
+							"value": "hình áo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/upload/cc9ffb61-055b-4816-bd76-602b82848585",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"upload",
+						"cc9ffb61-055b-4816-bd76-602b82848585"
 					]
 				}
 			},

@@ -15,10 +15,10 @@ import { diskStorage } from 'multer';
 import { extname } from 'path';
 import { UploadFileService } from './upload-file.service';
 
-@Controller('upload')
+@Controller('api/upload')
 export class UploadFileController {
   constructor(private readonly uploadFileService: UploadFileService) {}
-  @Get()
+  @Get("/all")
   async getfile() {
     return this.uploadFileService.getAllImage();
   }
@@ -32,7 +32,7 @@ export class UploadFileController {
     res.sendFile(`./uploads/${id}`, { root: '.' });
   }
 
-  @Post()
+  @Post('/file')
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({

@@ -34,7 +34,7 @@ export class UploadFileService {
       size: `${sizeMB} MB`,
       fileName: file.originalname,
       fileId: file.filename,
-      urlFile: `${serverEnv}/upload/img/${file.filename}`,
+      urlFile: `/api/upload/img/${file.filename}`,
     };
     const newFileDB = await this.uploadFileRepository.create(dataFile);
     await this.uploadFileRepository.save(newFileDB);
